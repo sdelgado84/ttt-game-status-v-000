@@ -38,7 +38,7 @@ def winner(board)
     winner = board[won?(board)[0]]
   end
 end
- 
+
 def play(board)
   until over?(board) == true
     turn(board)
