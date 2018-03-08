@@ -33,3 +33,19 @@ end
 def over?(board)
  draw?(board) == true || won?(board) != nil
 end
+def winner(board)
+  if won?(board) != nil
+    winner = board[won?(board)[0]]
+  end
+end
+ 
+def play(board)
+  until over?(board) == true
+    turn(board)
+  end
+  if draw?(board) == true
+       puts "Cats Game!"
+  else won?(board)
+     puts "Congratulations #{winner(board)}!"
+   end
+end
